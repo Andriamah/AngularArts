@@ -1,0 +1,81 @@
+/* liste-collection-artiste.component.css */
+.cover-photo {
+    max-width: 100%; /* La photo de couverture ne dépassera pas la largeur de son conteneur */
+    max-height: 100vh; /* La hauteur maximale de la photo de couverture sera la hauteur de l'écran */
+    display: block;
+    margin: auto; /* Pour centrer la photo de couverture horizontalement */
+  }
+  .biography {
+    text-align: justify; /* Alignement justifié pour un aspect esthétique */
+    max-width: 800px; /* Largeur maximale du texte pour éviter qu'il ne devienne trop large */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement intérieur pour un meilleur aspect */
+    font-size: 16px; /* Taille de police du texte */
+    line-height: 1.6; /* Hauteur de ligne pour un espacement confortable entre les lignes */
+  }
+  
+  .biography h2 {
+    text-align: center; /* Centrage du titre */
+    margin-bottom: 20px; /* Espacement en bas du titre */
+  }
+  
+  .biography p {
+    margin-bottom: 15px; /* Espacement en bas des paragraphes */
+  }
+  
+  .biography img {
+    display: block; /* Pour éviter les marges étranges autour de l'image */
+    margin: 0 auto 15px; /* Centrage horizontal et espacement en bas */
+  }
+  .tree-select-container {
+    display: flex;
+    flex-direction: row; /* Aligne les éléments enfants horizontalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments enfants */
+    flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+}
+
+
+
+/* Appliquer des styles au champ de date */
+/* Styles pour le champ de date */
+input[type="date"] {
+    padding: 0.5rem; /* Ajouter un peu de rembourrage pour un aspect plus agréable */
+    border: 1px solid #08a0ff; /* Couleur de la bordure */
+    border-radius: 4px; /* Bordure arrondie */
+    background-color: #fbf4e2; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    font-size: 1rem; /* Taille de la police */
+    box-shadow: 0 0 5px rgba(5, 70, 249, 0.1); /* Léger ombrage */
+    transition: border-color 0.3s ease; /* Transition de couleur de bordure */
+  }
+  
+  /* Lorsque le champ est en focus */
+  input[type="date"]:focus {
+    outline: none; /* Supprimer la bordure de focus par défaut */
+    border-color: #4d90fe; /* Changement de couleur de bordure en focus */
+  }
+  
+  
+  /* Styles pour le texte de la date sélectionnée */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    /* Ajoutez vos styles personnalisés ici */
+    color: #333; /* Couleur du texte */
+    font-size: 1rem; /* Taille de la police */
+  }
+
+  :host .product-item .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: .3rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+:host .product-item .product-image {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+  
+  

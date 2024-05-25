@@ -1,0 +1,78 @@
+.form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto;
+    background-color: #fbf4e2;
+}
+/* Style pour le header */
+.header {
+    padding: 20px; /* Ajoute un espacement interne */
+    /* background-color: #f0f0f0;  */
+    border-bottom: 1px solid #ccc; /* Bordure en bas */
+    margin-bottom: 20px; /* Marge inférieure pour séparer du contenu suivant */
+  }
+  /* Style pour le titre */
+h2 {
+    font-size: 24px; /* Taille de la police */
+    color: #021a25; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Marge inférieure pour séparer du contenu suivant */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    font-weight: bold; /* Poids de la police */
+  }
+  
+.content {
+    max-width: 1000px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style pour les champs de date */
+input[type="date"] {
+    border: 1px solid #ccc;
+    /* Bordure */
+    border-radius: 5px;
+    /* Coins arrondis */
+    padding: 8px;
+    /* Espacement interne */
+    font-size: 16px;
+    /* Taille de police */
+}
+
+/* Style pour la section des cards */
+.card {
+    max-height: 400px; /* Hauteur maximale */
+    overflow: auto; /* Activation du défilement */
+  }
+  
+
+.tree-select-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.tree-select-container>span {
+    margin-right: 10px;
+}
+
+.p-treeselect-container {
+    font-size: 16px;
+}
+
+.p-treeselect {
+    font-size: 16px;
+    padding: 5px;
+}
+
+.p-button {
+    font-size: 16px;
+}

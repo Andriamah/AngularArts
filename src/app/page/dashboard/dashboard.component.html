@@ -1,0 +1,69 @@
+<div class="form-container">
+  <div class="biography">
+    <div class="wrapper">
+      <div class="card"><p><strong>16/20</strong></p></div>
+      <div class="card"><p><strong>16/20</strong></p></div>
+      <div class="card"><p><strong>16/20</strong></p></div>
+    </div>
+    
+  </div>
+  <p-carousel [value]="topCollections" [numVisible]="3" [numScroll]="1">
+    <ng-template pTemplate="header">
+      <h2>TOP 5 DES OEUVRES</h2>
+  </ng-template>
+    <ng-template pTemplate="header">
+        <div class="tree-select-container">
+            <span class="p-treeselect-container">Date Debut:
+                <input type="date"  />
+            </span>
+            <span class="p-treeselect-container">Date fin:
+                <input type="date"  />
+            </span>
+            <p-button label="Valider" severity="info" ></p-button>
+        </div>
+        <p-button icon="pi pi-plus" [rounded]="true" severity="help" [routerLink]="'/addCollection/:id'"></p-button>
+
+    </ng-template>
+  
+    <br>
+    <ng-template let-collection pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3"
+            [routerLink]="'/detail/' + collection.nom">
+            <div class="p-3 border-1 surface-border border-round">
+                <div class="mb-6">
+                    <img alt="Card" src="assets/images/oe.jpg" style="max-width: 100%; height: auto;" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ collection.nom }}</h4>
+                    <h6 class="mt-0 mb-3">{{ 'Nb Element' }}</h6>
+                </div>
+            </div>
+  
+        </div>
+    </ng-template>
+  </p-carousel>
+  <p-carousel [value]="collectionsNonPublie" [numVisible]="3" [numScroll]="1">
+    <ng-template pTemplate="header">
+        <h2>Oeuvre non publié</h2>
+    </ng-template>
+    <ng-template let-artiste pTemplate="item">
+        <div [routerLink]="'/collection/' + artiste.nom">
+            <div class="typeCategory">
+                <hr class="line-category" />
+                <div class="content-img-category">
+                    <img src="https://i.pinimg.com/736x/88/6c/2d/886c2dd9632df00ec675fdcf6d2fac92.jpg" alt="img"
+                        class="img-category" />
+                </div>
+                <div class="description">
+                    <div class="content-description">
+                        <div class="desc-content">{{ artiste.nom }}</div>
+                        <hr class="line-desc" />
+                        <div class="desc-content">{{ 'Nb Element : ' + artiste.nbElement }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+  </p-carousel>
+  
+</div>

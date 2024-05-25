@@ -1,0 +1,67 @@
+<!-- 3 Category -->
+<h1 style="text-align: center;margin-top: 50px;">TOP 3 ACTUELLES DES ARTS</h1>
+<div class="threeCategory">
+
+  <div class="typeCategory" *ngFor="let artiste of artistes">
+    <div class="title">
+      <a href="#">
+        <div class="action-line">
+          Ancien artistes
+          </div></a>
+    </div>
+    <hr class="line-category" />
+    <div class="content-img-category" [routerLink]="'/collection/' + artiste.nom">
+      <img
+        src="https://i.pinimg.com/736x/88/6c/2d/886c2dd9632df00ec675fdcf6d2fac92.jpg"
+        alt="img"
+        class="img-category"
+      />
+    </div>
+    <div class="description">
+      <div class="content-description">
+        <div class="desc-content">{{artiste.nom}}</div>
+        <hr>
+        <div class="desc-content">{{artiste.nomDeScene}}</div>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- fin 3 category -->
+
+<div class="content">
+  <div>
+    <div class="top1">
+      <div class="top1-col2">
+        <div class="content-top1-col2">
+          <div class="title-art">
+            "ARTWORK" : Une Ode à l'Éphémère
+          </div>
+          <div class="desc-art">
+            Nous sommes passionnés par l’art et dédiés à sa présentation de la manière la plus attrayante et respectueuse possible. Notre équipe d’experts travaille sans relâche pour assurer que chaque œuvre d’art est installée avec soin et précision, respectant à la fois l’intention de l’artiste et l’espace dans lequel elle est exposée.
+
+            Que vous soyez un artiste cherchant à exposer votre travail, un galeriste à la recherche d’une équipe de confiance pour installer une nouvelle exposition, ou simplement un amateur d’art curieux, nous sommes là pour vous. Explorez notre site pour en savoir plus sur nos services, voir des exemples de notre travail précédent, et découvrir comment nous pouvons vous aider à réaliser votre vision artistique.
+
+            Nous croyons que l’art a le pouvoir de transformer les espaces, d’inspirer la réflexion et de connecter les gens. Nous sommes honorés de jouer un rôle dans ce processus et nous nous réjouissons de la possibilité de travailler avec vous.
+
+            J’espère que cela vous convient ! N’hésitez pas à modifier ou à adapter ce texte selon vos besoins spécifiques. Bonne chance avec votre site web !
+          </div>
+
+            <div class="action-line">
+                  <img src="assets/images/next.png" class="icone" /></div
+          >
+        </div>
+      </div>
+
+      <div class="top1-col1">
+        <img
+          src="https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="img"
+          class="img-top1"
+        />
+      </div>
+    </div>
+  </div>
+</div>

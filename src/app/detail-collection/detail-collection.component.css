@@ -1,0 +1,259 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 700px; 
+  width: auto;
+  /* padding-top: auto; */
+  /* margin-bottom: 100px; */
+  background-color: #fbf4e2;
+}
+
+  
+  .image-frame {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-right: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 50vw; /* Définit la largeur maximale du cadre par rapport à la largeur de la fenêtre du navigateur */
+    max-height: 50vh; /* Définit la hauteur maximale du cadre par rapport à la hauteur de la fenêtre du navigateur */
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: fadeIn 0.5s ease-in-out; /* Appliquer l'animation de fondu */
+  }
+  .image-frame:hover img {
+    transform: scale(1.1); /* Agrandir l'image au survol */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Ajouter une ombre au survol */
+    animation: fadeIn 0.5s ease-in-out; /* Appliquer l'animation de fondu */
+  }
+
+  .container {
+    display: flex;
+    margin-top: 1px;
+}
+
+.image-frame {
+    width: 50%; /* Ajuster la largeur de l'image */
+    flex: 0 0 auto; /* Laisser la taille de l'image non flexible */
+    margin-top: -100px;
+
+}
+
+.details {
+    width: 50%; /* Ajuster la largeur des détails */
+    display: flex;
+    flex-direction: column;
+    margin-top: -100px;
+    padding-left: 5px; /* Ajouter un espace entre l'image et les détails */
+    position: relative; /* Position relative pour positionner les icônes absolument */
+}
+
+.description {
+    margin-bottom: 20px; /* Ajouter un espace entre la description et les icônes */
+}
+
+.actions {
+    position: absolute; /* Position absolue pour les icônes */
+    /* bottom: 0; Aligner les icônes en bas */
+    right: 0; /* Aligner les icônes à gauche */
+}
+
+
+.actions i {
+    margin-right: 10px; /* Ajouter un espacement entre les icônes */
+    font-size: 24px; /* Taille de la police des icônes */
+}
+
+.wow-effect {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+.comment-container {
+  border: 1px solid #002c77;
+  border-radius: 5px;
+  padding: 10px;
+  max-height: 300px; /* Ajuste la hauteur totale du conteneur */
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding: auto;
+  display: flex;
+  justify-content: space-between; /* Assure que l'ajout de commentaires est à droite */
+  align-items: center;
+}
+
+
+.add-comment {
+  display: flex;
+  margin-top: 10px;
+  background-color: #f0f0f0; /* Fond clair */
+  padding: 10px; /* Espacement interne */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+.add-comment input[type="text"] {
+  flex-grow: 1; /* Prend tout l'espace disponible */
+  padding: 8px; /* Espacement interne */
+  font-size: 14px; /* Taille de la police */
+  border: 1px solid #ccc; /* Bordure légère grise */
+  border-radius: 3px; /* Coins arrondis pour la bordure */
+  background-color: #fff; /* Fond blanc pour l'input */
+  color: #333; /* Couleur du texte sombre */
+}
+
+.add-comment input[type="text"]::placeholder {
+  color: #999; /* Couleur du placeholder */
+}
+
+.add-comment button {
+  background-color: #007bff; /* Couleur de fond bleue */
+  color: #fff; /* Couleur du texte blanc */
+  border: none; /* Supprime la bordure */
+  padding: 8px 15px; /* Espacement interne */
+  font-size: 14px; /* Taille de la police */
+  border-radius: 3px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointeur */
+  transition: background-color 0.3s ease; /* Transition fluide */
+}
+
+.add-comment button:hover {
+  background-color: #0056b3; /* Couleur de fond bleue plus foncée au survol */
+}
+
+
+.comments-wrapper {
+  flex-grow: 1; /* Permet à cette section de prendre tout l'espace disponible */
+  overflow-y: auto; /* Active le défilement vertical si nécessaire */
+}
+
+.comments {
+  display: flex;
+  flex-direction: column; /* Aligne les commentaires verticalement */
+}
+
+.comment {
+  display: flex; /* Utilise Flexbox pour aligner l'avatar et le contenu du commentaire horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  margin-bottom: 10px; /* Ajoute un espacement entre les commentaires */
+}
+
+.avatar {
+  margin-right: 10px; /* Ajoute un espacement entre l'avatar et le contenu du commentaire */
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column; /* Aligne les informations de l'utilisateur et le texte du commentaire verticalement */
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd; /* Ligne de séparation légère */
+  margin: 10px 0;
+}
+
+.text {
+  margin-top: 5px; /* Espacement entre le nom d'utilisateur et le texte du commentaire */
+}
+
+
+.user-avatar {
+  width: 40px; /* Ajuste la taille de l'image de l'avatar */
+  height: 40px;
+  border-radius: 50%; /* Rend l'image de l'avatar circulaire */
+  /* object-fit: cover; Assure que l'image de l'avatar est entièrement visible */
+  margin-right: 10px;
+}
+
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 20px; /* Ajoute un espacement au-dessus du formulaire */
+}
+
+.add-comment input[type="text"] {
+  flex: 1; /* Le champ de texte prendra autant d'espace que possible */
+  padding: 10px; /* Ajoute de l'espace à l'intérieur du champ de texte */
+  border: 1px solid #ccc; /* Ajoute une bordure autour du champ de texte */
+  border-radius: 5px; /* Arrondit les coins du champ de texte */
+  margin-right: 10px; /* Ajoute un espacement entre le champ de texte et le bouton */
+}
+
+.add-comment button {
+  padding: 10px 20px; /* Ajoute de l'espace à l'intérieur du bouton */
+  background-color: #007bff; /* Change la couleur de fond du bouton */
+  color: #fff; /* Change la couleur du texte du bouton */
+  border: none; /* Supprime la bordure du bouton */
+  border-radius: 5px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Change le curseur au survol du bouton */
+}
+
+.add-comment button:hover {
+  background-color: #0056b3; /* Change la couleur de fond du bouton au survol */
+}
+.user-info {
+  font-weight: bold; /* Mettre le nom en gras */
+}
+
+.text {
+  font-size: 14px; /* Réduire la taille du texte des commentaires */
+  color: #555; /* Changer la couleur du texte des commentaires */
+}
+
+/* Styles personnalisés */
+.filled {
+  color: red; /* Définir la couleur remplie */
+}
+
+/* Changer la couleur des étoiles actives */
+::ng-deep .p-rating-star {
+  color: #2e2d2d !important; /* Couleur gris clair pour les étoiles inactives */
+}
+
+::ng-deep .p-rating .p-rating-icon.pi-star.p-highlight {
+  color: #FFD700 !important; /* Couleur dorée pour les étoiles actives */
+}
+
+::ng-deep .p-rating .p-rating-icon.pi-star:hover,
+::ng-deep .p-rating .p-rating-icon.pi-star.p-highlight:hover {
+  color: #FFA500 !important; /* Couleur orange pour les étoiles au survol */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

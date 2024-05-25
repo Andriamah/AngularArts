@@ -1,0 +1,9 @@
+<div class="container">
+
+    <div class="exhibition-container">
+        <p><img *ngFor="let image of images; let i = index" [src]="image.src" [alt]="image.alt" class="exhibition-image"
+                [class.active]="i === currentIndex"
+                [ngStyle]="{'--rotate': image.rotation + 'deg', 'top': image.top + '%', 'left': image.left + '%'}">
+        </p>
+    </div>
+</div>

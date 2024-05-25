@@ -1,0 +1,222 @@
+.form-container {
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fbf4e2; /* Couleur de fond pour l'en-tête */
+
+}
+.header {
+    padding: 20px; /* Ajoute un espacement interne */
+    background-color: #f0f0f0; /* Couleur de fond */
+    border-bottom: 1px solid #ccc; /* Bordure en bas */
+    margin-bottom: 20px; /* Marge inférieure pour séparer du contenu suivant */
+  }
+  /* Style pour le titre */
+  h2 {
+    font-size: 24px; /* Taille de la police */
+    color: #002132; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Marge inférieure pour séparer du contenu suivant */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    font-weight: bold; /* Poids de la police */
+    position: relative;
+    overflow: hidden; /* Pour l'animation de la bordure */
+    background: rgba(255, 255, 255, 0.1); /* Ajouter un fond pour que la bordure soit visible */
+    padding: 10px; /* Ajouter du padding pour que le texte ne touche pas les bords */
+    border-radius: 15px; /* Arrondir les bordures */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour un effet de profondeur */
+}
+
+h2::before, h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fbf4e2;
+    top: 50%;
+    left: -100%;
+    animation: slide-in 1s forwards;
+}
+
+h2::after {
+    top: auto;
+    bottom: 50%;
+    animation-delay: 0.5s;
+}
+
+@keyframes slide-in {
+    to {
+        left: 100%;
+    }
+}
+
+h2 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: fade-in 0.5s forwards;
+}
+
+h2 span:nth-child(1) { animation-delay: 0.5s; }
+h2 span:nth-child(2) { animation-delay: 0.6s; }
+h2 span:nth-child(3) { animation-delay: 0.7s; }
+/* Ajoutez plus de règles nth-child si le texte contient plus de caractères */
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    margin-left: 10px;
+    background-color: #dc3545;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.input-group {
+    display: inline-block;
+    align-items: center;
+    margin: right 50px;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.textarea-container {
+    margin-bottom: 20px;
+  }
+  
+  .textarea-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical; /* Permet à l'utilisateur de redimensionner verticalement le textarea */
+  }
+  
+  .textarea-container textarea:focus {
+    outline: none;
+    border-color: #007bff; /* Couleur de la bordure lorsqu'il est focus */
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Ombre autour du textarea lorsqu'il est focus */
+  }
+  .header {
+    background-color: #ffd874; /* Couleur de fond pour l'en-tête */
+    padding: 10px; /* rgb(104, 184, 249)ent intérieur pour le contenu */
+    text-align: center; /* Alignement du texte au centre */
+}
+
+
+.btn {
+    background-color: #ffd874; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Ajouter un peu de bord arrondi */
+    cursor: pointer; /* Curseur pointeur au survol */
+    text-align: right; /* Alignement du texte au centre */
+
+}
+
+.btn:hover {
+    background-color: #fbf4e2; /* Couleur de fond du bouton au survol */
+}
+.image-container {
+    width: 300px; /* ajustez la largeur du cadre selon vos besoins */
+    height: auto; /* ajustez la hauteur du cadre selon vos besoins */
+    overflow: hidden; /* pour cacher les parties de l'image qui dépassent du cadre */
+  }
+  
+  #uploaded-image {
+    width: 100%; /* afin que l'image occupe toute la largeur du cadre */
+    height: auto; /* pour maintenir le ratio hauteur/largeur de l'image */
+    display: block; /* pour supprimer tout espace supplémentaire autour de l'image */
+  }
+/* Style pour l'input de type date */
+input[type="date"] {
+    padding: 8px; /* Ajustez le rembourrage selon vos préférences */
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+    border-radius: 4px; /* Ajoutez un arrondi aux coins */
+    font-size: 16px; /* Ajustez la taille de la police selon vos préférences */
+    width: 100%; /* Ajustez la largeur selon vos préférences */
+    box-sizing: border-box; /* Inclure le rembourrage et la bordure dans la largeur totale */
+  }
+  
+  /* Style pour le label de l'input de type date */
+  label[for="date"] {
+    margin-right: 10px; /* Ajoutez un espace entre le label et l'input */
+  }
+    
+  /* Style pour l'élément input de type fichier */
+input[type="file"] {
+    padding: 10px; /* Espacement interne */
+    cursor: pointer; /* Curseur personnalisé */
+    outline: none; /* Supprimer la bordure bleue sur la sélection */
+  }
+  
+  /* Style pour le texte à l'intérieur de l'élément input de type fichier */
+  input[type="file"]::file-selector-button {
+    font-size: 16px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    padding: 8px 16px; /* Espacement interne */
+    border: none; /* Supprimer la bordure du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #02a7ff; /* Couleur de fond */
+    cursor: pointer; /* Curseur personnalisé */
+    transition: background-color 0.3s ease; /* Animation de transition */
+  }
+  
+  /* Style au survol du bouton */
+  input[type="file"]:hover::file-selector-button {
+    background-color: #0062ff; /* Couleur de fond foncée au survol */
+  }
+  
+  /* Style lorsque le bouton est actif (clic) */
+  input[type="file"]:active::file-selector-button {
+    background-color: #fbf4e2;; /* Couleur de fond plus foncée lors du clic */
+  }
+  

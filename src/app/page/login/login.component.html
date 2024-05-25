@@ -1,0 +1,48 @@
+
+<script>
+document.querySelector('.img__btn').addEventListener('click', function() {
+  console.log('makato')
+  document.querySelector('.cont').classList.toggle('s--signup');n
+});
+</script>
+<div style="background-color: #374151;" class="login">
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>Bienvenue de nouveau,</h2>
+      <label>
+        <span>Email</span>
+        <input type="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" />
+      </label>
+      <!-- <p class="forgot-pass">Forgot password?</p> -->
+      <button type="button" class="submit">Se connecter</button>
+    </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h2>Vous êtes nouveaux?</h2>
+          <p>Veuillez faire une inscription!</p>
+        </div>
+        <!-- <div class="img__text m--in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
+        </div> -->
+        <!-- <a href="/login">Se connecter</a> -->
+      <a href="/inscription">
+        <div class="img__btn">
+          <span  class="m--up">S'inscrire</span>
+        </div>
+      </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- <script>
+document.querySelector('.img__btn').addEventListener('click', function() {
+  document.querySelector('.cont').classList.toggle('s--signup');
+});
+</script> -->

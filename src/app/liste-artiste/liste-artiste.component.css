@@ -1,0 +1,187 @@
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* .container{
+  background-color: antiquewhite;
+} */
+.content {
+  width: 90vw; /* La largeur de l'écran occupe 90% de la largeur du viewport */
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  max-width: auto; /* ou toute autre valeur appropriée */
+  height:40vh;
+  /* background-color: #004f87; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  /* color: #fff; */
+}
+
+.top1-col1,
+.top1-col2 {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-art {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  margin-bottom: 3vh;
+  color: #001524;
+  font-weight: 700;
+}
+
+.desc-art {
+  font-family: Arial, sans-serif;
+  color: #4f5c64;
+  font-size: 16px;
+  margin-bottom: 6vh;
+}
+
+.ligne-haut,
+.ligne-bas {
+  border: none;
+  width: 15vw;
+  height: 2px;
+  background-color: #4fe89b;
+}
+
+.ligne-bas {
+  width: 10vw;
+}
+
+.action-line {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  color: #001524;
+}
+
+.icone {
+  width: 18px;
+  height: 18px;
+}
+
+.threeCategory {
+  padding: 5vw;
+  display: flex;
+  gap: 5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.typeCategory {
+  width: 30vw;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: width 0.3s ease, height 0.3s ease;
+  margin: 0 10px;
+}
+
+.typeCategory:hover {
+  width: 25vw;
+}
+
+.line-category {
+  width: 18vw;
+  height: 2px;
+  background-color: #4f5c64;
+  border: none;
+  margin-top: 3vh;
+}
+
+.content-img-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.img-category {
+  width: 18vw;
+  height: 46vh;
+}
+
+.description {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.line-desc {
+  width: 18vw;
+  height: 2px;
+  background-color: #4f5c64;
+  border: none;
+}
+
+.content-description {
+  margin-top: 2vh;
+  width: 18vw;
+}
+
+.desc-content {
+  display: flex;
+  align-items: center;
+}
+
+.tree-select-container {
+  display: flex;
+  flex-direction: row; /* Aligne les éléments enfants horizontalement */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 20px; /* Espacement entre les éléments enfants */
+  flex-wrap: wrap; /* Permet aux éléments de se replier sur plusieurs lignes si nécessaire */
+}
+.p-treeselect-container {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.p-treeselect {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  padding: 8px;
+  width: 200px;
+}
+
+.p-treeselect:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.p-treeselect option {
+  padding: 4px;
+}
+
+.p-treeselect option:hover {
+  background-color: #f0f0f0;
+}
+/* Styles personnalisés */
+.p-treeselect-container {
+  font-family: Arial, sans-serif;
+}
+
+.p-treeselect-container label {
+  display: inline-block;
+  width: 60px; /* Ajustez la largeur du label selon vos besoins */
+}
+@media screen and (max-width: 768px) {
+  /* Styles à appliquer pour les écrans jusqu'à 768px de largeur */
+  .typeCategory {
+    /* Ajoutez vos styles de mise en page ici */
+  }
+}

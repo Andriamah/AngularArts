@@ -1,0 +1,113 @@
+.cover-photo {
+  max-width: 100%;
+  max-height: 100vh;
+  display: block;
+  margin: auto;
+}
+
+.biography {
+  text-align: justify;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.biography h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.biography p {
+  margin-bottom: 15px;
+}
+
+.biography img {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.tree-select-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #08a0ff;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1rem;
+  box-shadow: 0 0 5px rgba(5, 70, 249, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #4d90fe;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #333;
+  font-size: 1rem;
+}
+
+:host .product-item .product-item-content {
+  border: 1px solid var(--surface-d);
+  border-radius: 3px;
+  margin: .3rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+:host .product-item .product-image {
+  width: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.img-category {
+  max-width: 1000px; /* Ajustez la taille maximale de la largeur */
+  max-height: 500px; /* Ajustez la taille maximale de la hauteur */
+}
+.title, .desc-content {
+  font-size: 20px; /* Ajustez la taille de la police selon vos besoins */
+}
+.typeCategory {
+  margin: 5px; /* Ajustez la marge entre les éléments du carousel */
+}
+.form-container {
+  /* max-width: 900px; Réduire la largeur maximale à 600px */
+  max-height: 700px; /* Réduire la hauteur maximale à 800px */
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #014074; /* Couleur de fond pour l'en-tête */
+  position: relative;
+  /* display: flex; */
+  justify-content: space-between;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  height: 100px;
+  background-color: #FFA500; /* Couleur jaune-orange */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 20px;
+}
+.card strong {
+  font-weight: bold;
+  text-align: center; /* Centrer le texte */
+}
+

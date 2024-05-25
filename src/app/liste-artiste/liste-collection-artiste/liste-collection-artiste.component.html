@@ -1,0 +1,44 @@
+<!-- cover-photo.component.html -->
+<div class="cover-photo-container">
+    <img class="cover-photo" [src]="pdc" alt="Photo de couverture">
+</div>
+<!-- liste-collection-artiste.component.html -->
+<div class="biography">
+    <h2>Biographie</h2>
+    <p>Nom : {{artiste.nom}} </p>
+    <p>Nom de scène : {{artiste.nomDeScene}} </p>
+    <p>{{artiste.nom}}, connu sous le nom de {{artiste.nomDeScene}}, né le {{artiste.dateNaissance}} et décédé le {{artiste.dateMort}},
+         était un {{artiste.biographie}}, de nationalité {{artiste.nationalite}}. 
+          Il a laissé un héritage artistique impressionnant avec environ {{artiste.nbOeuvres}} œuvres reconnues à travers le monde</p>
+</div>
+<p-carousel [value]="collections" [numVisible]="3" [numScroll]="1">
+    <ng-template pTemplate="header">
+        <div class="tree-select-container">
+            <span class="p-treeselect-container">Date Debut:
+                <input type="date" [(ngModel)]="selectedDateDebut" />
+            </span>
+            <span class="p-treeselect-container">Date fin:
+                <input type="date" [(ngModel)]="selectedDateFin" />
+            </span>
+            <p-button label="Valider" severity="info" (click)="validerSelection($event)"></p-button>
+        </div>
+    </ng-template>
+
+    <br>
+    <ng-template let-collection pTemplate="item">
+        <div class="border-1 surface-border border-round m-2 text-center py-5 px-3" [routerLink]="['/',artiste.nom,'detail' ,collection.nom]">
+            <div class="p-3 border-1 surface-border border-round">
+                <div class="mb-6">
+                    <img alt="Card" src="assets/images/oe.jpg" style="max-width: 100%; height: auto;" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ collection.nom }}</h4>
+                    <h6 class="mt-0 mb-3">{{collection.date_de_creation}}</h6>
+                </div>
+            </div>
+
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+    </ng-template>
+</p-carousel>

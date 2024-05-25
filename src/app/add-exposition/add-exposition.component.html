@@ -1,0 +1,35 @@
+<div class="form-container">
+    <header class="header">
+        <h2>Programmer une exposition</h2>
+    </header>
+    <div>
+        <div class="form-group">
+            <div class="input-group" style="margin-right: 50px;">
+                <label for="name">Titre :</label>
+                <input type="text" id="name" [(ngModel)]="titre" required>
+            </div>
+            <div class="input-group"style="margin-right: 50px;">
+                <label for="date">Date de création :</label>
+                <input type="date" id="email" [(ngModel)]="date" required>
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <div class="input-group">
+                <!-- <label for="email">Date de création :</label>
+                <input type="email" id="email" name="email" required> -->
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group" style="margin-right: 50px;">
+                <label for="email">Description :</label>
+                <div class="card flex justify-content-center">
+                    <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="description"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+        <button class="btn">Valider</button>
+
+        
+</div>

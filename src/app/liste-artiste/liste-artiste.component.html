@@ -1,0 +1,61 @@
+<!-- 3 Category -->
+    <div class="content">
+        <div>
+            <div class="tree-select-container">
+                <span class="p-treeselect-container">Categorie:
+                    <select class="p-treeselect" [(ngModel)]="selectedType">
+                        <option *ngFor="let typeArtiste of typeArtistes" [value]="typeArtiste.nom">{{ typeArtiste.nom }}
+                        </option>
+                    </select>
+                </span>
+                <span class="p-treeselect-container">Genre:
+                    <select class="p-treeselect" [(ngModel)]="selectedGenre">
+                        <option *ngFor="let genre of genres" [value]="genre.value">{{ genre.label }}</option>
+                    </select>
+                </span>
+                <span class="p-treeselect-container">Popularité:
+                    <select class="p-treeselect" [(ngModel)]="selectedPop">
+                        <option *ngFor="let popularite of popularites" [value]="popularite.nom">{{ popularite.nom }}
+                        </option>
+                    </select>
+                </span>
+                <p-button label="Valider" severity="info" (click)="validerSelection($event)"></p-button>
+            </div>
+        </div>
+    </div>
+
+    <p-carousel [value]="artistes" [numVisible]="3" [numScroll]="1">
+        <ng-template pTemplate="header">
+            <!-- Votre code de template header ici -->
+        </ng-template>
+        <ng-template let-artiste pTemplate="item">
+            <div [routerLink]="'/collection/' + artiste.nom">
+                <div class="typeCategory">
+
+                    <div class="title">
+                        <a href="#">
+                            <div class="action-line">
+                                {{ artiste.nom }}
+                            </div>
+                        </a>
+                    </div>
+                    <hr class="line-category" />
+                    <div class="content-img-category">
+                        <img src="https://i.pinimg.com/736x/88/6c/2d/886c2dd9632df00ec675fdcf6d2fac92.jpg" alt="img"
+                            class="img-category" />
+                    </div>
+                    <div class="description">
+                        <div class="content-description">
+                            <div class="desc-content">{{ artiste.nom }}</div>
+                            <hr class="line-desc" />
+                            <div class="desc-content">{{ 'Nb Element : ' + artiste.nbElement }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="footer">
+            <!-- Votre code de template footer ici -->
+        </ng-template>
+    </p-carousel>
+<!-- fin 3 category -->

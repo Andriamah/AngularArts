@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.exhibition-container {
+  position: relative;
+  width: 200%;
+  height: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exhibition-image {
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  opacity: 0;
+  transform: scale(0.5) rotate(0deg);
+  transition: transform 1s, opacity 1s;
+}
+
+.exhibition-image.active {
+  opacity: 1;
+  transform: scale(1) rotate(var(--rotate));
+}

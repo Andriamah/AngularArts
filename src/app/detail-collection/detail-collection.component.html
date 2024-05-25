@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="image-frame">
+        <img src="assets/images/oe.jpg" alt="Image" id="fullscreen-image">
+    </div>
+    <div class="details">
+        <div class="description">
+            <div class="card flex justify-content-center">
+                <p-rating [(ngModel)]="value" [stars]="5" (click)="onRateChanged($event)"></p-rating>
+              </div>              
+            <h2>Titre de l'image : {{collection.nom}}</h2><h3>{{collection.date_de_creation}}</h3>
+            <div class="actions">
+                <ng-container *ngIf="adore">
+                    <i class="pi pi-heart filled" id="heart-icon" (click)="actionHeart()"></i>
+                    <!-- Icône de cœur remplie -->
+                </ng-container>
+                <ng-container *ngIf="!adore">
+                    <i class="pi pi-heart" id="heart-icon" (click)="actionHeart()"></i>
+                </ng-container>
+            </div>
+            <p class="wow-effect">{{collection.description}}</p>
+        </div>
+        
+        <div class="comment-container">
+            <div class="comments-header">
+              Commentaires
+            </div>
+            <div class="add-comment">
+              <input type="text" [(ngModel)]="newComment" placeholder="Ajouter un commentaire...">
+              <button (click)="addNewComment()">Ajouter</button>
+            </div>
+            <div class="comments-wrapper">
+              <div class="comments">
+                <div class="comment" *ngFor="let comment of comments">
+                  <div class="avatar">
+                    <img src="assets/images/profile.PNG" class="user-avatar" alt="Avatar">
+                  </div>
+                  <div class="comment-content">
+                    <div class="user-info">{{ comment.user }}</div>
+                    <div class="text">{{ comment.comment }}</div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+    </div>
+</div>

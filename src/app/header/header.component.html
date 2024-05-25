@@ -1,0 +1,16 @@
+
+<div class="header" [ngClass]="{'hidden': isHeaderHidden}" (window:scroll)="onScroll()">
+  <div class="logo">ArtWork</div>
+  <div class="links">
+    <div class="one-link"><a href="#">Acceuil</a></div>
+    <div class="one-link"><a href="/addCollection/:id">Ajout</a></div>
+    <div class="one-link"><a routerLink="/listeArtiste/">Artistes</a></div>
+    <div class="one-link"><a routerLink="/agenda/">Agenda</a></div>
+    <div class="one-link"><a routerLink="/dashboard/">Dashboard</a></div>
+  </div>
+  <div class="actions">
+    <div class="one-action"><a href="/login">Se connecter</a></div>
+    <div class="one-action"><a href="#">Partager</a></div>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="layout-sidebar" [ngClass]="{'layout-sidebar-active': sidebarActive}">
+  <div class="layout-logo">
+    <!-- <img src="assets/images/logo.svg" alt="PrimeNG Logo"> -->
+  </div>
+  <div class="layout-menu">
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <button class="layout-sidebar-close" (click)="toggleSidebar()">
+    <i class="pi pi-times"></i>
+  </button>
+</div>

@@ -1,0 +1,57 @@
+
+<div class="form-container">
+    <header class="header">
+        <div class="content">
+            <div>
+                <h2>Les évenements à venir</h2>
+                <div class="tree-select-container">
+                    <span class="p-treeselect-container">Categorie:
+                        <select class="p-treeselect" [(ngModel)]="selectedType">
+                            <option *ngFor="let typeArtiste of typeArtistes" [value]="typeArtiste.nom">{{ typeArtiste.nom }}
+                            </option>
+                        </select>
+                    </span>
+                    <span class="p-treeselect-container">Date Debut:
+                        <input type="date" [(ngModel)]="selectedDateDebut" />
+                    </span>
+                    <span class="p-treeselect-container">Date fin:
+                        <input type="date" [(ngModel)]="selectedDateFin" />
+                    </span>
+                    <p-button label="Valider" severity="info" (click)="validerSelection($event)"></p-button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <p-button icon="pi pi-plus" [rounded]="true" severity="help" [routerLink]="'/expositions/add'"></p-button>
+    <div class="card">
+        <p-timeline [value]="exxpositions" align="alternate" styleClass="customized-timeline">
+            <ng-template pTemplate="marker" let-event>
+                <span class="custom-marker shadow-2" [style.backgroundColor]="event.color">
+                    <p-button icon="pi pi-calendar-times" severity="help"></p-button>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="content" let-expo>
+                <p-card [header]="expo.titre" [subheader]="expo.date_rdv ">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+                        repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione
+                        quam perferendis esse, cupiditate
+                        neque quas!
+                    </p>
+                    <p-button label="Assister à l'expisition" [rounded]="true" severity="success"  [routerLink]="'/exposition/10'"></p-button>
+                    <p-button label="Acheter billet" [rounded]="true" severity="info"></p-button>
+                </p-card>
+            </ng-template>
+        </p-timeline>
+    </div>
+</div>
+
+<div class="card flex justify-content-center">
+    <p-button ></p-button>
+    <p-dialog header="Header" [(visible)]="visible" [breakpoints]="{ '960px': '75vw' }" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </p-dialog>
+</div>

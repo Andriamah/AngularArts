@@ -1,0 +1,38 @@
+<div class="gallerie">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <h1>Collections</h1>
+  <div class= "text-center">
+    <p-inputGroup>
+        <p-inputGroupAddon>
+            <a href=""><i class="pi pi-search"></i></a>
+        </p-inputGroupAddon>
+        <input pInputText placeholder="    Nom collection" />
+    </p-inputGroup>
+
+</div>
+
+
+  <div class="container-all">
+      <div class="container" *ngFor="let art of arts">
+          <a href="detail/{{art.id}}">
+            <div>
+              <img
+              src="https://i.pinimg.com/564x/6b/a3/39/6ba339f7ab80e76950b027e1d40b7af4.jpg"
+              alt=""
+              class="img-gallery"
+            />
+            <span class="title">Lorem ipsum dolor</span>
+            <span class="text"
+              >Morbi diam viverra mattis sociis magna, habitasse penatibus non
+              lectus</span
+            >
+            </div>
+          </a>
+      </div>
+
+  </div>
+  <div style="background-color: black;" class="flex-auto">
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="120"></p-paginator>
+  </div>
+</div>
